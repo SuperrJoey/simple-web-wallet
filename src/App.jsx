@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { generateMnemonic } from "bip39";
 import { SolanaWallet } from "./SolanaWallet";
+import { EthereumWallet } from "./EthereumWallet";
 
 function App() {
   const [mnemonic, setMnemonic] = useState("");
@@ -47,6 +48,7 @@ function App() {
 
       {/* Wallet creation */}
       {mnemonic && <SolanaWallet mnemonic={mnemonic} />}
+      {mnemonic && <EthereumWallet mnemonic={mnemonic} />}
     </div>
   );
 }
